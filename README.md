@@ -1,2 +1,2 @@
 # epirecipes
-Docker container for epirecipes
+Docker container for http://epirecip.es
