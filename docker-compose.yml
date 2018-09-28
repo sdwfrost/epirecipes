@@ -3,5 +3,5 @@ version: '2'
 services:
   man:
     build: .
-    image: sdwfrost/epirecipes-base
+    image: sdwfrost/epirecipes
 
