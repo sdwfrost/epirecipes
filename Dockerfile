@@ -34,8 +34,8 @@ RUN julia -e 'using Plots'
 RUN julia -e 'using DifferentialEquations'
 RUN julia -e 'using NamedArrays'
 RUN julia -e 'using RandomNumbers'
-RUN julia -e 'ENV["PYTHON"]="";using PyCall'
-RUN julia -e 'ENV["PYTHON"]="";using PyPlot'
+RUN julia -e 'using PyCall'
+RUN julia -e 'using PyPlot'
 RUN julia -e 'using RCall'
 RUN julia -e 'using StatPlots'
 RUN julia -e 'using SymPy'
@@ -70,3 +70,4 @@ RUN R -e "devtools::install_github('mrc-ide/odin',upgrade=FALSE)"
 RUN npm install -g ode-rk4 \
     plotly-notebook-js
 
+USER root
