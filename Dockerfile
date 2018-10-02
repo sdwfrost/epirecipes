@@ -70,6 +70,8 @@ RUN R -e "devtools::install_github('mrc-ide/odin',upgrade=FALSE)"
 RUN npm install -g ode-rk4 \
     plotly-notebook-js
 
-RUN apt-get update && apt-get -y install libopenblas-dev
-
 USER root
+
+RUN apt-get update && apt-get -y install libopenblas-dev
+RUN R -e "setRepositories(ind=1:2);install.packages(c(\
+    'subplex'), dependencies=TRUE, clean=TRUE, repos='https://cran.microsoft.com/snapshot/2018-09-01')"
