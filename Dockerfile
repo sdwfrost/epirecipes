@@ -70,4 +70,6 @@ RUN R -e "devtools::install_github('mrc-ide/odin',upgrade=FALSE)"
 RUN npm install -g ode-rk4 \
     plotly-notebook-js
 
+RUN apt-get update && apt-get -y install libopenblas-dev
+
 USER root
