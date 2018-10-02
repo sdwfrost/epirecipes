@@ -75,3 +75,4 @@ USER root
 RUN apt-get update && apt-get -y install libopenblas-dev
 RUN R -e "setRepositories(ind=1:2);install.packages(c(\
     'subplex'), dependencies=TRUE, clean=TRUE, repos='https://cran.microsoft.com/snapshot/2018-09-01')"
+RUN R -e "devtools::install_github(c('mrc-ide/cinterpolate', 'richfitz/dde'),upgrade=FALSE)"
