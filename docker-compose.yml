@@ -1,7 +1,15 @@
 version: '2'
 
 services:
-  man:
+  epirecipes-build:
     build: .
     image: sdwfrost/epirecipes
-
+    user: root
+    environment:
+        - GRANT_SUDO=yes
+        - NB_USER=jovyan
+    volumes:
+        - .:/home/jovyan
+    ports:
+        - 8888:8888
+    container_name: epirecipes-container
