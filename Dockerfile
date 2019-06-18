@@ -66,6 +66,7 @@ RUN pip install --no-cache-dir \
 # Old rgeos
 RUN R -e "devtools::install_version('rgeos', version = '0.3-28')"
 RUN R -e "setRepositories(ind=1:2);install.packages(c(\
+    'animation', \
     'ape', \
     'data.table', \
     'deSolve', \
@@ -73,14 +74,19 @@ RUN R -e "setRepositories(ind=1:2);install.packages(c(\
     'ddeSolve', \
     'diffeqr', \
     'DSAIDE', \
+    'ecostat', \
     'epimdr', \
     'EpiDynamics', \
     'EpiILM', \
     'EpiModel', \
+    'fields', \
+    'geosphere' \
     'ggforce', \
+    'ggmap', \
     'ggplot2', \
     'GillespieSSA', \
     'git2r', \
+    'gridExtra', \
     'FME', \
     'maptools', \
     'odeintr', \
@@ -88,19 +94,24 @@ RUN R -e "setRepositories(ind=1:2);install.packages(c(\
     'plotly', \
     'plyr', \
     'pomp', \
+    'raster', \
     'rbi', \
     'rgdal', \
+    'rgeos', \
     'ReacTran', \
     'reticulate', \
     'Rcpp', \
     'rstan', \
     'scales', \
+    'SDMTools', \
     'sf', \
     'simecol', \
     'SimInf', \
     'simmer', \
     'sp', \
+    'spatstat', \
     'spdep', \
+    'stpp', \
     'tweenr', \
     'XRJulia', \
     'XRPython'), dependencies=TRUE, clean=TRUE, repos='https://cran.microsoft.com/snapshot/2018-11-01')"
