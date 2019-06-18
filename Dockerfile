@@ -74,7 +74,7 @@ RUN R -e "setRepositories(ind=1:2);install.packages(c(\
     'ddeSolve', \
     'diffeqr', \
     'DSAIDE', \
-    'ecostat', \
+    'ecoptat', \
     'epimdr', \
     'EpiDynamics', \
     'EpiILM', \
@@ -114,7 +114,7 @@ RUN R -e "setRepositories(ind=1:2);install.packages(c(\
     'stpp', \
     'tweenr', \
     'XRJulia', \
-    'XRPython'), dependencies=TRUE, clean=TRUE, repos='https://cran.microsoft.com/snapshot/2018-11-01')"
+    'XRPython'), dependencies=TRUE, clean=TRUE, repos='https://cran.microsoft.com/snapshot/2019-06-01')"
 
 # Tweak compilation settings for R
 RUN R -e 'dotR <- file.path(Sys.getenv("HOME"), ".R"); \
